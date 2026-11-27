@@ -6,11 +6,25 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
+import types
+import wave
 from pathlib import Path
 
 import numpy as np
-import soundfile as sf
 from PIL import Image, ImageDraw
+
+try:
+    import soundfile as sf
+except ModuleNotFoundError:
+    def _read_wav(path):
+        with wave.open(str(path), "rb") as wf:
+            sr = wf.getframerate()
+            raw = wf.readframes(wf.getnframes())
+            arr = np.frombuffer(raw, dtype="<i2").astype(np.float64) / 32768.0
+            if wf.getnchannels() > 1:
+                arr = arr.reshape(-1, wf.getnchannels()).mean(axis=1)
+            return arr, sr
+    sf = types.SimpleNamespace(read=_read_wav)
 
 from studio_engine import render_frame, FPS
 

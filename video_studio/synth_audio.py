@@ -8,10 +8,22 @@ from __future__ import annotations
 
 import json
 import math
+import types
+import wave
 from pathlib import Path
 
 import numpy as np
-import soundfile as sf
+try:
+    import soundfile as sf
+except ModuleNotFoundError:
+    def _write_wav(path, stereo, sr, subtype=None):
+        pcm16 = np.clip(stereo * 32767.0, -32768, 32767).astype("<i2")
+        with wave.open(str(path), "wb") as wf:
+            wf.setnchannels(2)
+            wf.setsampwidth(2)
+            wf.setframerate(int(sr))
+            wf.writeframes(pcm16.tobytes())
+    sf = types.SimpleNamespace(write=_write_wav)
 
 SR = 48000
 DURATION_S = 33.60
