@@ -1,0 +1,222 @@
+[
+  {
+    "file": "07002139.wav",
+    "source_url": "https://sound-effects.bbcrewind.co.uk/search?q=07002139",
+    "bytes": 4653232,
+    "sha256": "5b8e0314551c6eb2fc3d2eb0ab6e86a4a6e7ae1f025b6f53499a229a3ba4c2be",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 26.375,
+    "bit_rate": 1411432
+  },
+  {
+    "file": "07002140.wav",
+    "source_url": "https://sound-effects.bbcrewind.co.uk/search?q=07002140",
+    "bytes": 4678896,
+    "sha256": "a9518ef65fdf7d52643715ec46087c58e669904f2ff2f86f4aa1342368cd2e74",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 26.52,
+    "bit_rate": 1411431
+  },
+  {
+    "file": "07002141.wav",
+    "source_url": "https://sound-effects.bbcrewind.co.uk/search?q=07002141",
+    "bytes": 5448000,
+    "sha256": "9a3bb1742ed562a20c82e9c8504604928f2c7579e702962ebbfb1d7d577ca35b",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 30.88,
+    "bit_rate": 1411398
+  },
+  {
+    "file": "07002142.wav",
+    "source_url": "https://sound-effects.bbcrewind.co.uk/search?q=07002142",
+    "bytes": 7720032,
+    "sha256": "c41dacc3c7cd2c395ffb43a1ab57651177b607071af5e10ae227547d30ff685d",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 43.76,
+    "bit_rate": 1411340
+  },
+  {
+    "file": "07002154.wav",
+    "source_url": "https://sound-effects.bbcrewind.co.uk/search?q=07002154",
+    "bytes": 4954080,
+    "sha256": "6095a22841de7acc5f4e80a97c26820d326167c854797f26f06c5e858d70c16f",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 28.08,
+    "bit_rate": 1411418
+  },
+  {
+    "file": "aporee_2016_bridge_st.wav",
+    "source_url": "https://archive.org/download/aporee_74104_86696/2016122012h30londresbigbenClaireSauvagetbin.wav",
+    "bytes": 27495694,
+    "sha256": "52afe38afd8d98b23dc65c44f1327abc5f8d705a14e80f3d3e0bfd3d2fe2b6d7",
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "pcm_s24le",
+    "duration_s": 95.468,
+    "bit_rate": 2304076
+  },
+  {
+    "file": "bbc_1953_12oclock.wav",
+    "source_url": "https://archive.org/download/big-ben-chimes_20260409_1317/07002153.wav",
+    "bytes": 15961440,
+    "sha256": "0e4c43f77b47bab335c238c177c94195567ac2e34342fb098a700d9a33d6ff86",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 90.48,
+    "bit_rate": 1411267
+  },
+  {
+    "file": "commons_1890_edison.ogg",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Big_Ben_recorded_in_1890.ogg",
+    "bytes": 3199770,
+    "sha256": "bb66d45c6c28bcb319715be8c551fb33b59474d620f99db88ff0933c7a252a5b",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "vorbis",
+    "duration_s": 141.015,
+    "bit_rate": 181528
+  },
+  {
+    "file": "commons_1945_broadcast.wav",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Westminster_chimes_%281_January_1945%29.wav",
+    "bytes": 13899984,
+    "sha256": "9e6163c1a485b17829eb69cb58b0f187d4d9e690be26a224d7e6568b24d29e70",
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "pcm_s16le",
+    "duration_s": 72.396,
+    "bit_rate": 1536004
+  },
+  {
+    "file": "commons_1oclock.ogg",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Westminster-and-one-o-clock.ogg",
+    "bytes": 336345,
+    "sha256": "f5b73cb89bf07ac3d4d938a61d6974141a4ad54c399f695dfc0b05d4a5915c92",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "vorbis",
+    "duration_s": 21.446,
+    "bit_rate": 125468
+  },
+  {
+    "file": "fs_343333_kalou.mp3",
+    "source_url": "https://cdn.freesound.org/previews/343/343333_2123898-hq.mp3",
+    "bytes": 3425104,
+    "sha256": "811f8117a54914e417cf9ee778a1a3069d309124013a17a640831010f08273da",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 147.879,
+    "bit_rate": 185292
+  },
+  {
+    "file": "fs_388808_westminster_bridge.mp3",
+    "source_url": "https://cdn.freesound.org/previews/388/388808_5854636-hq.mp3",
+    "bytes": 226464,
+    "sha256": "0d7618ad411113e91ca61d9b2a9e2f1b79ab24fc19bcd2352fa93d95f1cbb028",
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 9.768,
+    "bit_rate": 185474
+  },
+  {
+    "file": "fs_656683_11am.mp3",
+    "source_url": "https://cdn.freesound.org/previews/656/656683_10116052-hq.mp3",
+    "bytes": 2284451,
+    "sha256": "4d2d8cc0937d5c90ea7089999184289f1ead49870186acdf5a6e110dfd33a64f",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 119.092,
+    "bit_rate": 153457
+  },
+  {
+    "file": "fs_720696_nye2024.mp3",
+    "source_url": "https://cdn.freesound.org/previews/720/720696_10116052-hq.mp3",
+    "bytes": 1868420,
+    "sha256": "06d0169b57f445d891e855992eff187dc0a78a1ec31a25133294282d4e1094ec",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 82.834,
+    "bit_rate": 180448
+  },
+  {
+    "file": "fs_791991_milsom.mp3",
+    "source_url": "https://cdn.freesound.org/previews/791/791991_2179561-hq.mp3",
+    "bytes": 373032,
+    "sha256": "e68dd60e316ffa5fddffb5b5e5cb5d0eb62ddae9bb13070e323d523408246ecc",
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 20.04,
+    "bit_rate": 148914
+  },
+  {
+    "file": "ia_78_quarters_24bit.flac",
+    "source_url": "https://archive.org/download/78_1-big-ben-striking-12-strokes-2-big-ben-striking-14-hours-3-church-bells-t_gbia0034014b/(1)%20Big%20Ben%20Striking%2012%20Strokes%3B%20(2)%20Big%20Ben%20Striking%2014%20Hours%3B%20(3)%20Church%20Bells%20Tolling.flac",
+    "bytes": 61283828,
+    "sha256": "1e6839542f79b1e0524e4e834790f5558eb4f352274d91f8129872b3101d247b",
+    "sample_rate": 96000,
+    "channels": 2,
+    "codec": "flac",
+    "duration_s": 163.392,
+    "bit_rate": 3000577
+  },
+  {
+    "file": "ia_edis_quarters.mp3",
+    "source_url": "https://archive.org/download/EDIS-SWDPC-01-03/EDIS-SWDPC-01-03.mp3",
+    "bytes": 1623356,
+    "sha256": "ff65931e53db75c2d78bf858f664ceafcd5f47308ea60b72568d01bf16f3923f",
+    "sample_rate": 44100,
+    "channels": 1,
+    "codec": "mp3",
+    "duration_s": 135.194,
+    "bit_rate": 96060
+  },
+  {
+    "file": "midnight-hq.mp3",
+    "source_url": "https://cdn.freesound.org/previews/403/403131_1174540-hq.mp3",
+    "bytes": 1454705,
+    "sha256": "338544ecc0390749c886bb5bb376a6e4926d64d3be5ae0eb5eb86e0e754e5bd8",
+    "sample_rate": 44100,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 62.929,
+    "bit_rate": 184932
+  },
+  {
+    "file": "midnight-lq.mp3",
+    "source_url": "https://cdn.freesound.org/previews/403/403131_1174540-lq.mp3",
+    "bytes": 529248,
+    "sha256": "39da4b69ef42c6ffaadf65d47607db18b1644ac10557ffded80fa9a99ab19a59",
+    "sample_rate": 24000,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 62.952,
+    "bit_rate": 67257
+  },
+  {
+    "file": "square-lq.mp3",
+    "source_url": "https://cdn.freesound.org/previews/47/47098_323828-lq.mp3",
+    "bytes": 640248,
+    "sha256": "71f27f1c6ae68b6d4f231431036cae01d04cfc061335292f517bbda1c76afa68",
+    "sample_rate": 24000,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 75.504,
+    "bit_rate": 67837
+  }
+]

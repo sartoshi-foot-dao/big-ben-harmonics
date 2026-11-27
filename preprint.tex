@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref,microtype}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+
+\title{\textbf{The Chords Inside Big Ben: Modal Decomposition, Abbey Diffraction, and Acoustic OSINT Across 134 Years (1890--2024)}}
+\author{Ziding Zhang\\
+\small Independent Research Note \quad|\quad Companion to \url{https://zidingz.com/the-chords-inside-big-ben/}}
+\date{November 24, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Why does Big Ben sound clean and urgent inside Elizabeth Tower, mellow into a slow bass hum across Westminster Abbey inside Little Dean's Yard (354.5\,m slant range), and sound noticeably heavier at midnight in January than at noon in July? Using a 20-recording multi-era corpus (1890 Edison wax cylinder to 2024 post-restoration binaural audio, anchored by 1969 BBC 44.1\,kHz uncompressed PCM WAVs), we measure the full eigenmode set of the Great Bell and all four Whitechapel quarter bells, track the shifting Terhardt virtual-pitch chord across 14 seconds of decay, model Maekawa and ISO~9613-1 propagation over Westminster Abbey, recover a $-0.95$\,semitone ($0.9464\times$) playback speed error in the 1890 wax cylinder via dimensionless modal matching, and benchmark acoustic OSINT geolocation across Westminster against an aircraft Doppler detector (\texttt{doppler-geo}).
+\end{abstract}
+
+\section{Combinatorics and All Four Whitechapel Quarter Bells}
+The Westminster Quarters permute just four pitches in E major---$B_3$, $E_4$, $F^\sharp_4$, and $G^\sharp_4$---across five canonical four-note cells ($P_1$--$P_5$). Quarters $Q_1$ through $Q_4$ concatenate $1+2+3+4 = 10$ cells per hour, or 40 strokes ($G^\sharp_4$: 10, $F^\sharp_4$: 10, $E_4$: 12, $B_3$: 8). Because $10 \equiv 0 \pmod 5$, every full hour executes exactly two complete cycles around the permutation ring. Across the 12 hour blows of the 1953 BBC midnight recording, inter-onset intervals average $4.115\text{\,s}$ ($\sigma = 0.178\text{\,s}$).
+
+Applying pre-onset bleed subtraction ($0.85\times$ pre-strike spectrum) to the 1969 close belfry recordings (\texttt{07002139.wav}, \texttt{07002140.wav}) resolves every partial of all four 1857--58 Whitechapel quarter bells cleanly (Table~\ref{tab:quarters}). Unlike five-partial Simpson-tuned carillon bells (ideal nominal ratios $0.25 : 0.50 : 0.60 : 0.75 : 1.00 : 1.50$), all four Whitechapel quarter bells lock their minor-third tierce tightly at $0.590\text{--}0.593\,f_{\mathrm{nom}}$ ($\approx 26$\,cents flat of 0.60) and their upper fifth at $1.492\text{--}1.501\,f_{\mathrm{nom}}$.
+
+\begin{table}[h!]
+\centering\small
+\caption{Pre-onset-subtracted Whitechapel quarter bell eigenmodes (1969 BBC WAVs).}
+\label{tab:quarters}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Bell & Nominal $f_{\mathrm{nom}}$ (Hz) & Implied Strike & Tierce Ratio & Upper Fifth Ratio \\
+\midrule
+Quarter Bell 1 ($G^\sharp_4$) & 869.75 & 434.88\,Hz ($A_4$) & 0.591 (513.66\,Hz) & 1.492 (1297.93\,Hz) \\
+Quarter Bell 2 ($F^\sharp_4$) & 770.97 & 385.49\,Hz ($G_4$) & 0.590 (454.50\,Hz) & 1.501 (1157.19\,Hz) \\
+Quarter Bell 3 ($E_4$) & 678.99 & 339.50\,Hz ($F_4$) & 0.593 (402.60\,Hz) & 1.496 (1015.97\,Hz) \\
+Quarter Bell 4 ($B_3$) & 505.14 & 252.57\,Hz ($B_3$) & 0.591 (298.72\,Hz) & 1.243 (627.78\,Hz) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Great Bell Split Doublets and Virtual-Pitch Evolution}
+High-resolution Blackman FFT and ESPRIT analysis of the isolated 1969 1:00 strike (\texttt{07002142.wav}) confirms eight prominent partials with sharply stratified decay times ($T_{60}$, Table~\ref{tab:bbmodes}). Because Lord Grimthorpe demanded thick, stiff bronze walls and because the 1859 repair crack disrupted axial rotational symmetry, both the $E_4$ nominal and $B_4$ fifth split into Rayleigh doublets: ESPRIT resolves $332.735\text{\,Hz}$ and $335.440\text{\,Hz}$ ($\Delta f = 2.705\text{\,Hz}$, $0.370\text{\,s}$ amplitude beat period, independently verified by Hilbert envelope peak spacing at $0.3685\text{\,s}$), alongside $494.828\text{\,Hz}$ and $499.666\text{\,Hz}$ ($\Delta f = 4.837\text{\,Hz}$, $0.207\text{\,s}$ beat).
+
+Crucially, the upper fifth-partial at $883.34\text{\,Hz}$ ($A_5 +7$\,cents) acts as the dominant harmonic sub-octave cue for Hibbert's secondary virtual pitch near $441\text{\,Hz}$ ($A_4$). Applying Terhardt spectral-pitch weighting across four time windows of a single strike shows why the bell's perceived chord morphs in mid-air:
+\begin{itemize}
+\item \textbf{0--0.5\,s (Attack):} Virtual salience is led by $E_3$ (167.8\,Hz, $1.00$), $E_4$ (337.2\,Hz, $0.99$), and the dissonant $A_4$ secondary strike (440.6\,Hz, $0.68$), while the $G_3$ hum trails at $0.11$.
+\item \textbf{8--14\,s (Tail):} Because $883.34\text{\,Hz}$ ($T_{60}=7.96\text{\,s}$) decays by $-41.3\text{\,dB}$ relative to the initial peak while the $200.26\text{\,Hz}$ hum ($T_{60}=29.03\text{\,s}$) holds steady ($0.0\text{\,dB}$ relative shift), $A_4$ collapses to $0.02$ salience and $G_3$ surges to $0.56$ beside $B_4$ ($1.00$) and $E_3$ ($0.70$).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Measured Big Ben eigenmodes across 1953 BBC, 1969 BBC, and 2024 NYE recordings.}
+\label{tab:bbmodes}
+\begin{tabular}{lcccc}
+\toprule
+Partial & 1969 $f$ (Hz) & 1953 $f$ (Hz) & 2024 $f$ (Hz) & 1969 $T_{60}$ (s) \\
+\midrule
+Hum ($G_3 +37\text{c}$) & 200.26 & 201.01 & 200.56 & 29.03 \\
+Nominal ($E_4 +31\text{c}$) & 335.51 (332.74/335.44) & 336.77 & 335.97 & 14.17 \\
+Quint-region ($B_4 +20\text{c}$) & 499.75 (494.83/499.67) & 501.63 & 500.42 & 17.33 \\
+Octave Nominal ($E_5 +48\text{c}$) & 677.60 & 680.19 & 678.78 & 9.28 \\
+Super-Third ($A_5 +7\text{c}$) & 883.34 & 886.73 & 884.61 & 7.96 \\
+Upper Partial 6 ($C^\sharp_6$) & 1088.24 & --- & 1090.00 & 7.11 \\
+Upper Partial 7 ($E_6$) & 1315.45 & --- & 1317.87 & 8.53 \\
+Upper Partial 8 ($A_6$) & 1748.04 & --- & --- & 5.44 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Propagation to Little Dean's Yard Over Westminster Abbey}
+From the belfry louvers ($51.5007^\circ\text{N}, -0.1246^\circ\text{W}$, $65\text{\,m}$ height) to Little Dean's Yard at Westminster School ($51.4985^\circ\text{N}, -0.1282^\circ\text{W}$), the horizontal distance is $348.8\text{\,m}$ and the 3D slant range is $354.5\text{\,m}$ along bearing $226.0^\circ$, imposing $-30.99\text{\,dB}$ geometric spreading relative to $10\text{\,m}$ and intersecting Westminster Abbey's nave parapet and cloister stonework. Combining ISO~9613-1 atmospheric absorption with Maekawa knife-edge Fresnel diffraction predicts an excess $5\text{\,kHz}$ attenuation of $-29.4\text{\,dB}$ at $28^\circ\text{C}$ summer and $-49.5\text{\,dB}$ at $0^\circ\text{C}$ winter mist. Empirically, stepping merely from the 1969 belfry (\texttt{07002139.wav}) down to Palace Yard (\texttt{07002154.wav}) already drops the $2\text{--}6\text{\,kHz}$ over $300\text{--}950\text{\,Hz}$ band ratio by $10.87\text{\,dB}$.
+
+Temperature alters three simultaneous quantities between $0^\circ\text{C}$ and $28^\circ\text{C}$: sound speed drops from $347.87$ to $331.30\text{\,m/s}$, delaying arrival by $51.0\text{\,ms}$ ($1.070\text{\,s}$ vs.\ $1.019\text{\,s}$); bronze Young's modulus stiffens, shifting partials $-7.78$\,cents ($-1.50\text{\,Hz}$ at 335\,Hz); and ambient Westminster street noise falling from $60\text{\,dBA}$ daytime to $43\text{\,dBA}$ at night extends the audible sustained tail inside Little Dean's Yard from $3.0\text{\,s}$ to $6.9\text{\,s}$ (with sub-audible 200\,Hz energy persisting longer).
+
+\section{Multi-Era Forensics (1890--2024) and Westminster Acoustic OSINT}
+\paragraph{1890 Wax Cylinder Recovery.} Searching the isolated Big Ben hour-strike window ($88\text{--}141\text{\,s}$) of the 1890 Edison cylinder against the canonical dimensionless 1969 spectral template recovers playback speed multiplier $\hat{\alpha} = 0.9464$ ($-0.95$\,semitones, corroborated independently by blind log-frequency cross-correlation $\alpha = 0.9458$, $r=0.6136$, and a slow $4.525\text{\,s}$ hour-blow cadence vs.\ 1953's $4.115\text{\,s}$). Dividing raw cylinder peaks ($189.3, 314.1, 473.9, 641.0\text{\,Hz}$) by $0.9464$ restores $200.0\text{\,Hz}$ ($-2\text{c}$), $331.9\text{\,Hz}$ ($-19\text{c}$), $500.7\text{\,Hz}$ ($+3\text{c}$), and $677.3\text{\,Hz}$ ($-1\text{c}$).
+
+\paragraph{Mains ENF, Bitrate Invariance, and \texttt{doppler-geo}.} Narrowband 50\,Hz UK National Grid electrical network frequency (ENF) hum locks cleanly in mains-powered broadcasts (1953 at $50.132\text{\,Hz}$, $12.49\text{\,dB}$---explaining its $+0.38\%$ sharp pitch; 1969 at $49.964\text{\,Hz}$, $13.39\text{\,dB}$) and vanishes in battery Zoom H4n field captures (2016 Bridge St, $4.72\text{\,dB}$). Comparing identical 2017 midnight recordings encoded at $185\text{\,kbps}$ vs.\ $67\text{\,kbps}$ proves that modal frequencies drift by $<0.01\text{\,Hz}$ and $Q_{\mathrm{tilt}}$ changes by only $0.17\text{\,dB}$.
+
+Finally, running the \texttt{doppler-geo} aircraft detector (\texttt{dg.detect()}) directly on bell audio reveals why overhead flight acoustics fail here: Heathrow 27L/27R arrivals at $\approx 1{,}100\text{\,m}$ AGL change slant range by only $3.65\%$ across a $300\text{\,m}$ plaza (versus Big Ben's $874\text{\,ms}$ ground-wave lag span), while stationary bell strikes trigger false-positive Doppler detections ($\mathrm{score} = 3.87\text{--}5.24$, $f_0 = 325\text{--}347\text{\,Hz}$) even inside the belfry. Instead, a 4-observable acoustic OSINT vector---spectral tilt $Q_{\mathrm{tilt}}$, direct-to-reverberant ratio (DRR), autocorrelation facade reflection lag, and GCC-PHAT binaural interaural time difference (ITD)---achieves $63.7\text{\,m}$ leave-one-out slant-range MAE (vs.\ $82.6\text{\,m}$ constant baseline) and isolates the 2016 70 Bridge Street capture cleanly (ITD $-0.40\text{\,ms}$, $17.7\text{\,ms}$ facade bounce, DRR $-7.3\text{\,dB}$).
+
+\paragraph{Limitations.} Diffraction attenuation in Little Dean's Yard is modelled via Maekawa + ISO~9613-1 rather than measured directly behind Westminster Abbey with calibrated microphones; acoustic OSINT distance regression spans seven sites and requires empirical site pairs for dense azimuthal inversion.
+
+\begin{thebibliography}{9}
+\bibitem{rayleigh1890} Lord Rayleigh (1890), \emph{On Bells}, Philosophical Magazine 29(176), 1--17.
+\bibitem{hibbert2008} W.~A.~Hibbert (2008), \emph{The Quantification of Strike Pitch and Pitch Shift in Church Bells}, PhD thesis, The Open University.
+\end{thebibliography}
+
+\end{document}

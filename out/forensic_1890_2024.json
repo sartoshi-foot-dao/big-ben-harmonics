@@ -1,0 +1,334 @@
+{
+  "edison_1890_speed_recovery": {
+    "estimated_speed_multiplier_alpha": 0.9464,
+    "implied_pitch_shift_semitones": -0.95,
+    "recovered_partials": [
+      {
+        "ref_1969_hz": 200.26,
+        "raw_1890_hz": 189.26,
+        "speed_corrected_hz": 199.98,
+        "residual_cents": -2.5,
+        "local_whitened_snr": 31.63
+      },
+      {
+        "ref_1969_hz": 335.51,
+        "raw_1890_hz": 314.08,
+        "speed_corrected_hz": 331.87,
+        "residual_cents": -18.9,
+        "local_whitened_snr": 9.79
+      },
+      {
+        "ref_1969_hz": 499.75,
+        "raw_1890_hz": 473.9,
+        "speed_corrected_hz": 500.74,
+        "residual_cents": 3.4,
+        "local_whitened_snr": 3.86
+      },
+      {
+        "ref_1969_hz": 677.6,
+        "raw_1890_hz": 641.03,
+        "speed_corrected_hz": 677.34,
+        "residual_cents": -0.7,
+        "local_whitened_snr": 4.3
+      },
+      {
+        "ref_1969_hz": 883.34,
+        "raw_1890_hz": 824.49,
+        "speed_corrected_hz": 871.18,
+        "residual_cents": -24.0,
+        "local_whitened_snr": 3.63
+      },
+      {
+        "ref_1969_hz": 1088.24,
+        "raw_1890_hz": 1019.46,
+        "speed_corrected_hz": 1077.2,
+        "residual_cents": -17.7,
+        "local_whitened_snr": 2.87
+      },
+      {
+        "ref_1969_hz": 1315.45,
+        "raw_1890_hz": 1231.26,
+        "speed_corrected_hz": 1301.0,
+        "residual_cents": -19.1,
+        "local_whitened_snr": 3.03
+      }
+    ]
+  },
+  "corpus_forensic_metrics": [
+    {
+      "label": "1890 Edison Cylinder",
+      "file": "commons_1890_edison.ogg",
+      "sr_hz": 44100,
+      "f99_hz": 3916.0,
+      "f995_hz": 4922.0,
+      "enf_50hz_snr_db": -5.36,
+      "enf_100hz_snr_db": 6.1,
+      "big_ben_strike": {
+        "f_335": 343.25,
+        "f_500": 490.49,
+        "f_678": 676.0,
+        "f_883": 874.06,
+        "f_1306": 1308.53,
+        "partial_centroid_hz": 737.9,
+        "ratio_883_to_335_db": -1.47
+      },
+      "enf_peak_hz": 50.132,
+      "enf_line_sharpness_db": 5.36,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "1945 BBC Broadcast WAV",
+      "file": "commons_1945_broadcast.wav",
+      "sr_hz": 48000,
+      "f99_hz": 1486.0,
+      "f995_hz": 1887.0,
+      "enf_50hz_snr_db": 2.69,
+      "enf_100hz_snr_db": 12.24,
+      "big_ben_strike": {
+        "f_335": 345.04,
+        "f_500": 491.59,
+        "f_678": 679.08,
+        "f_883": 879.05,
+        "f_1306": 1298.68,
+        "partial_centroid_hz": 380.5,
+        "ratio_883_to_335_db": -36.99
+      },
+      "enf_peak_hz": 49.988,
+      "enf_line_sharpness_db": 5.59,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "1953 BBC 12 o'clock WAV",
+      "file": "bbc_1953_12oclock.wav",
+      "sr_hz": 44100,
+      "f99_hz": 2726.0,
+      "f995_hz": 2729.0,
+      "enf_50hz_snr_db": 15.66,
+      "enf_100hz_snr_db": -4.13,
+      "big_ben_strike": {
+        "f_335": 336.86,
+        "f_500": 501.75,
+        "f_678": 680.32,
+        "f_883": 886.94,
+        "f_1306": 1320.75,
+        "partial_centroid_hz": 598.3,
+        "ratio_883_to_335_db": -3.58
+      },
+      "enf_peak_hz": 50.132,
+      "enf_line_sharpness_db": 12.49,
+      "true_50hz_mains_lock": true
+    },
+    {
+      "label": "1969 BBC 1 o'clock WAV",
+      "file": "07002142.wav",
+      "sr_hz": 44100,
+      "f99_hz": 2707.0,
+      "f995_hz": 2714.0,
+      "enf_50hz_snr_db": 16.55,
+      "enf_100hz_snr_db": 1.1,
+      "big_ben_strike": {
+        "f_335": 335.48,
+        "f_500": 499.72,
+        "f_678": 677.53,
+        "f_883": 883.27,
+        "f_1306": 1315.34,
+        "partial_centroid_hz": 599.1,
+        "ratio_883_to_335_db": -3.93
+      },
+      "enf_peak_hz": 49.964,
+      "enf_line_sharpness_db": 13.39,
+      "true_50hz_mains_lock": true
+    },
+    {
+      "label": "2016 Bridge St Binaural WAV",
+      "file": "aporee_2016_bridge_st.wav",
+      "sr_hz": 48000,
+      "f99_hz": 1341.0,
+      "f995_hz": 1918.0,
+      "enf_50hz_snr_db": 3.45,
+      "enf_100hz_snr_db": 1.27,
+      "big_ben_strike": null,
+      "enf_peak_hz": 50.354,
+      "enf_line_sharpness_db": 4.72,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "2017 Midnight HQ MP3",
+      "file": "midnight-hq.mp3",
+      "sr_hz": 44100,
+      "f99_hz": 2650.0,
+      "f995_hz": 2898.0,
+      "enf_50hz_snr_db": 13.79,
+      "enf_100hz_snr_db": 6.21,
+      "big_ben_strike": {
+        "f_335": 333.04,
+        "f_500": 500.21,
+        "f_678": 677.85,
+        "f_883": 884.88,
+        "f_1306": 1304.93,
+        "partial_centroid_hz": 635.8,
+        "ratio_883_to_335_db": -4.36
+      },
+      "enf_peak_hz": 49.964,
+      "enf_line_sharpness_db": 11.86,
+      "true_50hz_mains_lock": true
+    },
+    {
+      "label": "2017 Midnight LQ MP3",
+      "file": "midnight-lq.mp3",
+      "sr_hz": 24000,
+      "f99_hz": 2066.0,
+      "f995_hz": 2405.0,
+      "enf_50hz_snr_db": 11.76,
+      "enf_100hz_snr_db": 11.79,
+      "big_ben_strike": {
+        "f_335": 333.04,
+        "f_500": 500.22,
+        "f_678": 677.85,
+        "f_883": 884.87,
+        "f_1306": 1304.94,
+        "partial_centroid_hz": 637.0,
+        "ratio_883_to_335_db": -4.35
+      },
+      "enf_peak_hz": 49.988,
+      "enf_line_sharpness_db": 5.58,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "2024 NYE Post-Restoration MP3",
+      "file": "fs_720696_nye2024.mp3",
+      "sr_hz": 44100,
+      "f99_hz": 2294.0,
+      "f995_hz": 2667.0,
+      "enf_50hz_snr_db": 17.14,
+      "enf_100hz_snr_db": 2.62,
+      "big_ben_strike": {
+        "f_335": 335.96,
+        "f_500": 500.43,
+        "f_678": 678.8,
+        "f_883": 884.6,
+        "f_1306": 1304.21,
+        "partial_centroid_hz": 635.3,
+        "ratio_883_to_335_db": 4.1
+      },
+      "enf_peak_hz": 49.627,
+      "enf_line_sharpness_db": 13.93,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "2024 Milsom Post-Restoration MP3",
+      "file": "fs_791991_milsom.mp3",
+      "sr_hz": 48000,
+      "f99_hz": 3520.0,
+      "f995_hz": 3771.0,
+      "enf_50hz_snr_db": 0.92,
+      "enf_100hz_snr_db": 3.8,
+      "big_ben_strike": null,
+      "enf_peak_hz": 50.171,
+      "enf_line_sharpness_db": 3.49,
+      "true_50hz_mains_lock": false
+    },
+    {
+      "label": "Parliament Sq LQ MP3",
+      "file": "square-lq.mp3",
+      "sr_hz": 24000,
+      "f99_hz": 1370.0,
+      "f995_hz": 2049.0,
+      "enf_50hz_snr_db": 8.7,
+      "enf_100hz_snr_db": 7.44,
+      "big_ben_strike": {
+        "f_335": 335.81,
+        "f_500": 495.13,
+        "f_678": 677.83,
+        "f_883": 883.67,
+        "f_1306": 1302.84,
+        "partial_centroid_hz": 586.5,
+        "ratio_883_to_335_db": -10.53
+      },
+      "enf_peak_hz": 50.079,
+      "enf_line_sharpness_db": 8.86,
+      "true_50hz_mains_lock": true
+    }
+  ],
+  "kl_nmf_k6_separation": {
+    "commons_1945_broadcast.wav": {
+      "r2_variance_explained": 0.9189,
+      "atom_peak_hz": [
+        304.7,
+        421.9,
+        515.6,
+        527.3,
+        527.3,
+        1195.3
+      ]
+    },
+    "07002142.wav": {
+      "r2_variance_explained": 0.9001,
+      "atom_peak_hz": [
+        226.1,
+        452.2,
+        495.3,
+        506.0,
+        872.1,
+        1399.7
+      ]
+    },
+    "aporee_2016_bridge_st.wav": {
+      "r2_variance_explained": 0.7591,
+      "atom_peak_hz": [
+        152.3,
+        187.5,
+        269.5,
+        433.6,
+        585.9,
+        668.0
+      ]
+    },
+    "fs_720696_nye2024.mp3": {
+      "r2_variance_explained": 0.9039,
+      "atom_peak_hz": [
+        204.6,
+        387.6,
+        506.0,
+        516.8,
+        678.3,
+        882.9
+      ]
+    },
+    "square-lq.mp3": {
+      "r2_variance_explained": 0.8005,
+      "atom_peak_hz": [
+        158.2,
+        222.7,
+        334.0,
+        404.3,
+        755.9,
+        873.0
+      ]
+    }
+  },
+  "extra_hour_checks": [
+    {
+      "label": "Archive 1 o'clock Ogg",
+      "file": "commons_1oclock.ogg",
+      "sr_hz": 44100,
+      "f_335": 332.06,
+      "f_500": 498.29,
+      "f_678": 668.88,
+      "f_883": 891.53,
+      "partial_centroid_hz": 881.5,
+      "ratio_883_to_335_db": 37.64
+    },
+    {
+      "label": "Modern 11am Post-2017 MP3",
+      "file": "fs_656683_11am.mp3",
+      "sr_hz": 44100,
+      "f_335": 332.26,
+      "f_500": 498.9,
+      "f_678": 676.55,
+      "f_883": 881.86,
+      "partial_centroid_hz": 590.9,
+      "ratio_883_to_335_db": -8.47
+    }
+  ]
+}

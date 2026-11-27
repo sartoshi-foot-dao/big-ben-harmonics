@@ -1,0 +1,282 @@
+{
+  "combinatorics": {
+    "unique_permutations": 5,
+    "total_permutation_plays_per_hour": 10,
+    "cycle_modulus": 5,
+    "cycle_closes_per_hour": true,
+    "cycles_per_hour": 2,
+    "notes_per_quarter": {
+      "Q1 (:15)": 4,
+      "Q2 (:30)": 8,
+      "Q3 (:45)": 12,
+      "Q4 (:00)": 16
+    },
+    "total_quarter_notes_per_hour": 40,
+    "strikes_per_bell_per_hour": {
+      "G#4": 10,
+      "F#4": 10,
+      "E4": 12,
+      "B3": 8
+    },
+    "matches_reference_exact": true
+  },
+  "big_ben_1969_isolated_strike": {
+    "strike_onset_s": 24.764,
+    "tail_duration_s": 18.996,
+    "partials_hz": {
+      "200": {
+        "measured_hz": 200.228,
+        "reference_hz": 200.26,
+        "delta_hz": -0.032,
+        "abs_delta_hz": 0.032
+      },
+      "335": {
+        "measured_hz": 335.487,
+        "reference_hz": 335.51,
+        "delta_hz": -0.023,
+        "abs_delta_hz": 0.023
+      },
+      "500": {
+        "measured_hz": 499.718,
+        "reference_hz": 499.75,
+        "delta_hz": -0.032,
+        "abs_delta_hz": 0.032
+      },
+      "678": {
+        "measured_hz": 677.593,
+        "reference_hz": 677.6,
+        "delta_hz": -0.007,
+        "abs_delta_hz": 0.007
+      },
+      "883": {
+        "measured_hz": 883.331,
+        "reference_hz": 883.34,
+        "delta_hz": -0.009,
+        "abs_delta_hz": 0.009
+      },
+      "1088": {
+        "measured_hz": 1088.232,
+        "reference_hz": 1088.24,
+        "delta_hz": -0.008,
+        "abs_delta_hz": 0.008
+      },
+      "1315": {
+        "measured_hz": 1315.452,
+        "reference_hz": 1315.45,
+        "delta_hz": 0.002,
+        "abs_delta_hz": 0.002
+      },
+      "1748": {
+        "measured_hz": 1748.053,
+        "reference_hz": 1748.04,
+        "delta_hz": 0.013,
+        "abs_delta_hz": 0.013
+      }
+    },
+    "max_partial_abs_delta_hz_6_core": 0.032,
+    "doublet_335hz": {
+      "fft_f1_hz": 332.798,
+      "fft_f2_hz": 335.487,
+      "fft_split_hz": 2.689,
+      "fft_beat_period_s": 0.3719,
+      "hilbert_n_peaks": 26,
+      "hilbert_median_beat_period_s": 0.3685,
+      "hilbert_mean_beat_period_s": 0.3734,
+      "hilbert_std_beat_period_s": 0.0243,
+      "hilbert_implied_split_hz": 2.714,
+      "hilbert_env_fft_freq_hz": 2.6917,
+      "ref_f1_hz": 332.735,
+      "ref_f2_hz": 335.44,
+      "ref_split_hz": 2.705,
+      "ref_beat_period_s": 0.37,
+      "delta_fft_split_hz": -0.016,
+      "delta_hilbert_split_hz": 0.009,
+      "delta_hilbert_period_s": -0.0015
+    }
+  },
+  "edison_1890_speed_recovery": {
+    "hour_strikes_88_141s": {
+      "alpha": 0.9458,
+      "semitones": -0.97,
+      "xcorr": 0.6136,
+      "xcorr_at_ref_alpha": 0.6103,
+      "matched_partials": [
+        {
+          "ref_1969_hz": 200.26,
+          "raw_1890_hz": 189.59,
+          "corrected_hz": 200.47,
+          "residual_cents": 1.8,
+          "local_snr_db": 26.47
+        },
+        {
+          "ref_1969_hz": 335.51,
+          "raw_1890_hz": 314.42,
+          "corrected_hz": 332.45,
+          "residual_cents": -15.8,
+          "local_snr_db": 17.52
+        },
+        {
+          "ref_1969_hz": 499.75,
+          "raw_1890_hz": 471.71,
+          "corrected_hz": 498.77,
+          "residual_cents": -3.4,
+          "local_snr_db": 8.72
+        },
+        {
+          "ref_1969_hz": 677.6,
+          "raw_1890_hz": 642.63,
+          "corrected_hz": 679.49,
+          "residual_cents": 4.8,
+          "local_snr_db": 7.55
+        },
+        {
+          "ref_1969_hz": 883.34,
+          "raw_1890_hz": 834.92,
+          "corrected_hz": 882.81,
+          "residual_cents": -1.0,
+          "local_snr_db": 5.02
+        },
+        {
+          "ref_1969_hz": 1088.24,
+          "raw_1890_hz": 1028.38,
+          "corrected_hz": 1087.37,
+          "residual_cents": -1.4,
+          "local_snr_db": 3.22
+        }
+      ]
+    },
+    "full_recording_0_141s": {
+      "alpha": 0.9458,
+      "semitones": -0.97,
+      "xcorr": 0.4457,
+      "xcorr_at_ref_alpha": 0.4428
+    },
+    "independent_ioi_check_85_141s": {
+      "n_blows_detected": 11,
+      "median_ioi_s": 4.525,
+      "ref_1953_ioi_s": 4.115,
+      "implied_alpha_from_ioi": 0.9094
+    },
+    "reference_forensic_alpha": 0.9464,
+    "reference_forensic_semitones": -0.95,
+    "alpha_discrepancy_vs_ref": -0.0006
+  },
+  "little_deans_yard": {
+    "haversine_horiz_m": 348.81,
+    "haversine_slant_m": 354.82,
+    "wgs84_horiz_m": 349.48,
+    "wgs84_slant_m": 355.48,
+    "bearing_deg": 226.08,
+    "ref_horiz_m": 348.8,
+    "ref_slant_m": 354.5,
+    "delta_horiz_haversine_m": 0.01,
+    "delta_slant_haversine_m": 0.32,
+    "c_0c_ms": 331.3,
+    "c_28c_ms": 347.87,
+    "lag_0c_hav_s": 1.071,
+    "lag_28c_hav_s": 1.02,
+    "lag_diff_hav_ms": 51.0,
+    "lag_diff_wgs_ms": 51.1,
+    "ref_lag_diff_ms": 51.0,
+    "delta_lag_diff_ms": 0.0,
+    "bands_hz": {
+      "low": [
+        200,
+        1000
+      ],
+      "high": [
+        2000,
+        5000
+      ]
+    },
+    "belfry_07002139_hi_lo_db": -8.92,
+    "ground_07002154_hi_lo_db": -19.68,
+    "measured_hf_drop_db": 10.76,
+    "ref_measured_hf_drop_db": 10.87,
+    "delta_hf_drop_db": -0.11
+  },
+  "codec_invariance_and_tilt": {
+    "midnight_hq_vs_lq": {
+      "full_recording_eigenfreqs": {
+        "335": {
+          "hq_hz": 335.5046,
+          "lq_hz": 335.5058,
+          "abs_drift_hz": 0.0013
+        },
+        "500": {
+          "hq_hz": 499.611,
+          "lq_hz": 499.6098,
+          "abs_drift_hz": 0.0012
+        },
+        "678": {
+          "hq_hz": 677.9391,
+          "lq_hz": 677.9417,
+          "abs_drift_hz": 0.0026
+        },
+        "883": {
+          "hq_hz": 883.351,
+          "lq_hz": 883.3448,
+          "abs_drift_hz": 0.0063
+        },
+        "1306": {
+          "hq_hz": 1301.0301,
+          "lq_hz": 1301.0323,
+          "abs_drift_hz": 0.0022
+        }
+      },
+      "max_eigenfreq_drift_full_hz": 0.0063,
+      "window_42_50s_eigenfreqs": {
+        "333": {
+          "hq_hz": 333.0475,
+          "lq_hz": 333.0471,
+          "abs_drift_hz": 0.0004
+        },
+        "500": {
+          "hq_hz": 500.2216,
+          "lq_hz": 500.2251,
+          "abs_drift_hz": 0.0035
+        },
+        "678": {
+          "hq_hz": 677.8339,
+          "lq_hz": 677.8352,
+          "abs_drift_hz": 0.0013
+        },
+        "883": {
+          "hq_hz": 884.8156,
+          "lq_hz": 884.8156,
+          "abs_drift_hz": 0.0001
+        },
+        "1306": {
+          "hq_hz": 1302.7077,
+          "lq_hz": 1302.7043,
+          "abs_drift_hz": 0.0034
+        }
+      },
+      "max_eigenfreq_drift_42_50s_hz": 0.0035,
+      "eigenfreq_threshold_0_05_hz_pass": true,
+      "tilt_hq_200_900_vs_1000_4000_db": -6.051,
+      "tilt_lq_200_900_vs_1000_4000_db": -5.945,
+      "tilt_abs_drift_db": 0.106,
+      "tilt_threshold_0_2_db_pass": true,
+      "ref_quarter_tilt_drift_db": 0.17,
+      "ref_big_ben_tilt_drift_db": 0.07
+    },
+    "aporee_2016_vs_bbc_1969_belfry_q1": {
+      "broadband_200_900_vs_1000_4000_db": {
+        "bbc_1969_belfry_q1": -0.27,
+        "aporee_2016_bridge_st": -7.59,
+        "difference_db": -7.32
+      },
+      "quarter_band_450_950_vs_1000_2600_db": {
+        "bbc_1969_belfry_q1": 0.88,
+        "aporee_2016_bridge_st": -2.94,
+        "difference_db": -3.82
+      },
+      "ref_osint_quarter_tilt_db": {
+        "bbc_1969_belfry_q1": 10.0,
+        "aporee_2016_bridge_st": -7.53,
+        "difference_db": -17.53
+      }
+    }
+  }
+}
